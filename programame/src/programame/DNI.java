@@ -53,6 +53,8 @@ public class DNI {
             dni = llegir.next();
             DNIS.add(dni);
         }
+        
+        
 
         for (int i = 0; i < numCasosProva; i++) {
 
@@ -68,13 +70,28 @@ public class DNI {
                 for (int j = 0; j < contadorIntegorrants; j++) {
                     for (int y = 0; y < 10; y++) {
                         String dnic = DNIS.get(i);
-                        
-                        
-                        
+
+                        for (int m = 0; m < DNIS.get(i).length(); m++) {
+                            String partinici = DNIS.get(i);
+                            if (DNIS.get(i).substring(m, m + 1) == "?") {
+                                String partinici = DNIS.get(i).substring(0, m);
+                                String partfinal = DNIS.get(i).substring(m + 1, DNIS.get(i).length());
+                                partinici = partinici + m + partfinal;
+                                DNIS.get(i) = partinici;
+                                for (int k = 0; k < 23; k++) {
+                                    int pos = partinici % 23; 
+                                    if (lletres[pos] == dnilletra[contadorIntegorrants]) {
+
+                                    }
+                                }
+
+                            }
+                        }
+
                         for (int k = 0; k < 10; k++) {
                             for (int l = 0; l < 10; l++) {
                                 for (int m = 0; m < 10; m++) {
-                                    
+
                                 }
                             }
                         }
